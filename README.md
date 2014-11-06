@@ -9,28 +9,49 @@ APIs are everywhere and proposed by all serious services. Here you'll read your 
 
 ### `GET /:promo_id/comments`
 
-Will get you the JSON file of all comments of a Wagon's prom. E.g:
+Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
 
 ```json
 [
   {
-    "id":1,
-    "author":"Boris",
-    "content":"Salut",
-    "promo_id":1,
-    "created_at":"2014-11-06T14:23:26.104Z",
-    "updated_at":"2014-11-06T14:23:26.104Z"
+    "id": 1,
+    "author": "Boris",
+    "content": "Salut",
+    "promo_id": 1,
+    "created_at": "2014-11-06T14:23:26.104Z",
+    "updated_at": "2014-11-06T14:23:26.104Z"
   },
   {
-    "id":2,
-    "author":"Seb",
-    "content":"Yo",
-    "promo_id":1,
-    "created_at":"2014-11-06T14:23:49.323Z",
-    "updated_at":"2014-11-06T14:23:49.323Z"
+    "id": 2,
+    "author": "Seb",
+    "content": "Yo",
+    "promo_id": 1,
+    "created_at": "2014-11-06T14:23:49.323Z",
+    "updated_at": "2014-11-06T14:23:49.323Z"
   }
 ]
 
 ### `POST /:promo_id/comments`
 
-Will
+Will post a new comment on our API's database for the promo `:promo_id`.
+In the request body, you have to send the details of the post, in the following JSON format:
+
+```json
+{
+  "author": "Seb",
+  "content": "Yo Yo Yo"
+}
+```
+
+The API will respond with the full details of the comment you've posted (in JSON format), e.g:
+
+```json
+{
+  "id": 8,
+  "author": "Seb",
+  "content": "Yo Yo Yo",
+  "promo_id": 1,
+  "created_at": "2014-11-06T14:23:49.323Z",
+  "updated_at": "2014-11-06T14:23:49.323Z"
+}
+```
