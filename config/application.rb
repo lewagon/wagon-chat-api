@@ -21,7 +21,7 @@ module WagonChatApi
     # config.i18n.default_locale = :de
 
     # config cors
-    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
+    config.middleware.insert_before "Rack::Cache", "Rack::Cors" do
       allow do
         origins '*'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
