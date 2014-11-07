@@ -11,7 +11,7 @@ APIs are everywhere and proposed by all serious services. Here you'll read your 
 
 The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) or in the JS console directly.
 
-#### Get comments: `GET /:promo_id/comments`
+#### Get comments `GET '/:promo_id/comments'`
 
 Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
 
@@ -36,7 +36,7 @@ Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
 ]
 ```
 
-#### Post a comment: `POST /:promo_id/comments`
+#### Post a comment `POST '/:promo_id/comments'`
 
 Will post a new comment on our API's database for the promo `:promo_id`.
 In the request body, you have to send the details of the post, in the following JSON format:
