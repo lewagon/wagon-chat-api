@@ -7,7 +7,7 @@ An API (Application Programming Interface) is just like a web-site that communic
 
 APIs are everywhere and proposed by all serious services. Here you'll read your first API documentation on a very simple example, the wagon-chat API!
 
-### `GET /:promo_id/comments`
+#### `GET /:promo_id/comments`
 
 Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
 
@@ -30,8 +30,9 @@ Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
     "updated_at": "2014-11-06T14:23:49.323Z"
   }
 ]
+```
 
-### `POST /:promo_id/comments`
+#### `POST /:promo_id/comments`
 
 Will post a new comment on our API's database for the promo `:promo_id`.
 In the request body, you have to send the details of the post, in the following JSON format:
