@@ -7,6 +7,10 @@ An API (Application Programming Interface) is just like a web-site that communic
 
 APIs are everywhere and proposed by all serious services. Here you'll read your first API documentation on a very simple example, the wagon-chat API!
 
+#### Base URL
+
+The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) or in the JS console directly.
+
 #### `GET /:promo_id/comments`
 
 Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
