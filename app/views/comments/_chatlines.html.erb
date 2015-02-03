@@ -1,0 +1,15 @@
+<% comments.each do |comment| %>
+<tr>
+  <td class="date">
+    <%= l comment.created_at, format: :short %>
+  </td>
+  <td class="author">
+    <span style="color: #<%= Digest::SHA1.hexdigest(comment.author.downcase)[0, 6] %>">
+      <%= comment.author.downcase %>
+    </span>
+  </td>
+  <td class="content">
+    <%= comment.content %>
+  </td>
+</tr>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Chat - Promo <%= params[:promo_id] %></h1>
+
+<table class="table table-condensed" id="chat">
+  <%= render 'chatlines', comments: @comments %>
+</table>
+
+<script>
+  var DASHBOARD_URL = '<%= dashboard_path(params[:promo_id], format: :js) %>';
+  var COMMENT_COUNT = <%= @comments.size %>;
+</script>

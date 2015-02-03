@@ -1,0 +1,5 @@
+if (COMMENT_COUNT < <%= @comments.size %>) {
+  $('#chat').html('<%= j render 'chatlines', comments: @comments %>');
+  $("html, body").animate({ scrollTop: $(document).height() }, 200);
+  COMMENT_COUNT = <%= @comments.size %>
+}

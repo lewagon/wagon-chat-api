@@ -1,0 +1,11 @@
+<h1>Wagon Chat API</h1>
+
+<% if @promo_ids.empty? %>
+  <p>There are no messages yet</p>
+<% else %>
+  <ul>
+    <% @promo_ids.each do |promo_id| %>
+    <li><%= link_to "Promo #{promo_id}", dashboard_path(promo_id: promo_id) %></li>
+    <% end %>
+  </ul>
+<% end %>
