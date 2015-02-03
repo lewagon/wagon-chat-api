@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :parse_json, only: [:index, :create]
+  before_action :parse_json, only: :create
 
   def index
     render json: Comment.where(promo_id: params[:promo_id]).order('created_at ASC')
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
 
   def parse_json
     # Allow students to omit `Content-Type: application/json` in their requests
-    params.merge! ActiveSupport::JSON.decode(request.body.string)
+    params.merge! ActiveSupport::JSON.decode(request.body.string) if request.body.string.present?
   end
 
 end
