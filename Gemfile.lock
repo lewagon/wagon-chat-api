@@ -65,6 +65,7 @@ GEM
     rack-cors (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-timeout (0.2.0)
     rails (4.2.0)
       actionmailer (= 4.2.0)
       actionpack (= 4.2.0)
@@ -127,6 +128,7 @@ DEPENDENCIES
   pg
   puma
   rack-cors
+  rack-timeout
   rails (= 4.2.0)
   rails_12factor
   sass-rails (~> 4.0.3)

@@ -10,5 +10,6 @@ gem 'jquery-rails'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'rack-timeout'
 gem 'rails_12factor', group: :production
 gem 'puma', group: :production
