@@ -27,7 +27,11 @@ class CommentsController < ApplicationController
 
   def parse_json
     # Allow students to omit `Content-Type: application/json` in their requests
-    params.merge! ActiveSupport::JSON.decode(request.body.string) if request.body.string.present?
+    begin
+      params.merge! ActiveSupport::JSON.decode(request.body.string) if request.body.string.present?
+    rescue JSON::ParserError
+      # Silently fail if could not parse JSON
+    end
   end
 
 end
