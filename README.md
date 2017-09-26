@@ -9,7 +9,7 @@ APIs are everywhere and proposed by all serious services. Here you'll read your 
 
 #### Base URL
 
-The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) or in the JS console directly.
+The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to test the API using [Postman](https://www.getpostman.com/) or in the JS console directly.
 
 #### Get comments `GET '/:channel/comments'`
 

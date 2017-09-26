@@ -5,7 +5,7 @@
 <% else %>
   <ul>
     <% @channels.each do |channel| %>
-    <li><%= link_to "Promo #{channel}", dashboard_path(channel: channel) %></li>
+    <li><%= link_to channel, dashboard_path(channel: channel) %></li>
     <% end %>
   </ul>
 <% end %>
