@@ -17,8 +17,8 @@ Will get you the JSON file of all messages ot the promo `:channel`. E.g:
 
 ```json
 {
-  channel: "general",
-  messages: [
+  "channel": "general",
+  "messages": [
     {
       "id": 1,
       "author": "Boris",
