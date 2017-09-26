@@ -7,4 +7,9 @@ namespace :comments do
     Comment.where(channel: channel).destroy_all
     puts "Destroyed #{count} chat messages form batch ##{channel}"
   end
+
+  desc "Destroy all messages"
+  task destroy_all: :environment do
+    Comment.destroy_all
+  end
 end
