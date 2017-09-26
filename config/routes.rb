@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get "/:promo_id", to: 'comments#dashboard', as: :dashboard
+  get "/:channel", to: 'comments#dashboard', as: :dashboard
   root to: 'comments#home'
 
   # API
-  get "/:promo_id/comments", to: "comments#index", promo_id: /\d+/, defaults: { format: :json}
-  post "/:promo_id/comments", to: "comments#create", promo_id: /\d+/, defaults: { format: :json}
+  get "/:channel/comments", to: "comments#index", channel: /\d+/, defaults: { format: :json}
+  post "/:channel/comments", to: "comments#create", channel: /\d+/, defaults: { format: :json}
 end

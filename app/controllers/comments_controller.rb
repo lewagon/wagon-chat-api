@@ -2,12 +2,12 @@ class CommentsController < ApplicationController
   before_action :parse_json, only: :create
 
   def index
-    render json: Comment.where(promo_id: params[:promo_id]).order('created_at ASC')
+    render json: Comment.where(channel: params[:channel]).order('created_at ASC')
   end
 
   def create
     puts params
-    @comment = Comment.new(promo_id: params[:promo_id], author: params[:author], content: params[:content])
+    @comment = Comment.new(channel: params[:channel], author: params[:author], content: params[:content])
     if @comment.save
       render json: @comment
     else
@@ -16,11 +16,11 @@ class CommentsController < ApplicationController
   end
 
   def dashboard
-    @comments = Comment.where(promo_id: params[:promo_id]).order('created_at ASC')
+    @comments = Comment.where(channel: params[:channel]).order('created_at ASC')
   end
 
   def home
-    @promo_ids = Comment.uniq.pluck(:promo_id).sort.reverse
+    @channels = Comment.all.pluck(:channel).uniq.sort.reverse
   end
 
   private

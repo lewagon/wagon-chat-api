@@ -11,9 +11,9 @@ APIs are everywhere and proposed by all serious services. Here you'll read your 
 
 The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to test the API using [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) or in the JS console directly.
 
-#### Get comments `GET '/:promo_id/comments'`
+#### Get comments `GET '/:channel/comments'`
 
-Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
+Will get you the JSON file of all comments ot the promo `:channel`. E.g:
 
 ```json
 [
@@ -21,7 +21,7 @@ Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
     "id": 1,
     "author": "Boris",
     "content": "Salut",
-    "promo_id": 1,
+    "channel": "1",
     "created_at": "2014-11-06T14:23:26.104Z",
     "updated_at": "2014-11-06T14:23:26.104Z"
   },
@@ -29,16 +29,16 @@ Will get you the JSON file of all comments ot the promo `:promo_id`. E.g:
     "id": 2,
     "author": "Seb",
     "content": "Yo",
-    "promo_id": 1,
+    "channel": "1",
     "created_at": "2014-11-06T14:23:49.323Z",
     "updated_at": "2014-11-06T14:23:49.323Z"
   }
 ]
 ```
 
-#### Post a comment `POST '/:promo_id/comments'`
+#### Post a comment `POST '/:channel/comments'`
 
-Will post a new comment on our API's database for the promo `:promo_id`.
+Will post a new comment on our API's database for the promo `:channel`.
 In the request body, you have to send the details of the post, in the following JSON format:
 
 ```json
@@ -55,7 +55,7 @@ The API will respond with the full details of the comment you've posted (in JSON
   "id": 8,
   "author": "Seb",
   "content": "Yo Yo Yo",
-  "promo_id": 1,
+  "channel": "1",
   "created_at": "2014-11-06T14:23:49.323Z",
   "updated_at": "2014-11-06T14:23:49.323Z"
 }

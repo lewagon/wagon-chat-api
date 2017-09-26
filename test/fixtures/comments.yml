@@ -3,9 +3,9 @@
 one:
   author: MyString
   content: MyText
-  promo_id: 1
+  channel: "1"
 
 two:
   author: MyString
   content: MyText
-  promo_id: 1
+  channel: ""
