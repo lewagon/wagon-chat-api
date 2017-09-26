@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
   before_action :parse_json, only: :create
 
   def index
-    render json: Comment.where(channel: params[:channel]).order('created_at ASC')
+    comments = Comment.where(channel: params[:channel]).order('created_at ASC')
+    render json: {
+      channel: params[:channel],
+      messages: comments
+    }
   end
 
   def create
