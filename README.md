@@ -13,7 +13,7 @@ The base URL of the API is `https://wagon-chat.herokuapp.com/`. Feel free to tes
 
 #### Get messages `GET '/:channel/messages'`
 
-Will get you the JSON file of all messages ot the promo `:channel`. E.g:
+Will get you the JSON file of all messages at the promo `:channel`. E.g:
 
 ```json
 {
