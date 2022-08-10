@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
     if @comment.save
       render json: @comment
     else
-      render json: { error: @comment.errors }
+      render json: { error: @comment.errors }, status: 422
     end
   end
 
