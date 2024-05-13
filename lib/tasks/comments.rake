@@ -11,5 +11,7 @@ namespace :comments do
   desc "Destroy all messages"
   task destroy_all: :environment do
     Comment.destroy_all
+    ActiveRecord::Base.connection.execute("VACUUM FULL ANALYZE comments")
+    puts "Destroyed all comments."
   end
 end

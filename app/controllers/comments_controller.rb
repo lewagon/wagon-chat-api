@@ -1,11 +1,16 @@
 class CommentsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: :create
   before_action :parse_json, only: :create
 
   def index
     comments = Comment.where(channel: params[:channel]).order('created_at ASC')
+    next_reset_at = DateTime.now
+    next_reset_at = next_reset_at.change(min: next_reset_at.min / 10 * 10, seconds: 0) # Reset every 10 minutes
+    next_reset_at += 10.minutes
     render json: {
       channel: params[:channel],
-      messages: comments
+      messages: comments,
+      next_reset_at: next_reset_at.utc
     }
   end
 

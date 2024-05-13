@@ -1,0 +1,8 @@
+{
+  "cron": [
+    {
+      "command": "bundle exec rails comments:destroy_all",
+      "schedule": "*/10 * * * *"
+    }
+  ]
+}

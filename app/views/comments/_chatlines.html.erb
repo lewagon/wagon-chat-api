@@ -1,7 +1,12 @@
+<tr>
+  <td>UTC</td>
+  <td>Author</td>
+  <td>Message</td>
+</tr>
 <% comments.each do |comment| %>
 <tr>
   <td class="date">
-    <%= l comment.created_at, format: :short %>
+    <%= l comment.created_at, format: :chat %>
   </td>
   <td class="author">
     <span style="color: #<%= Digest::SHA1.hexdigest(comment.author.downcase)[0, 6] %>">

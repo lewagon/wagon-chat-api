@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'comments#home'
 
   # API
-  get "/:channel/messages", to: "comments#index", defaults: { format: :json }
-  post "/:channel/messages", to: "comments#create", defaults: { format: :json }
+  get "/:channel/messages", to: "comments#index", defaults: {format: :json}
+  post "/:channel/messages", to: "comments#create", defaults: {format: :json}
 end

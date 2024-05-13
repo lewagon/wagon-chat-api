@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_09_26_093816) do
-
+ActiveRecord::Schema[7.1].define(version: 2024_05_13_085328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +20,7 @@ ActiveRecord::Schema.define(version: 2017_09_26_093816) do
     t.string "channel"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["channel"], name: "index_comments_on_channel"
   end
 
 end
